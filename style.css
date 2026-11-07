@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+.skills-section {
+    min-height: 100vh;
+    padding: 90px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Section Title */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-title h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* Skills Container */
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 40px;
+}
+
+
+/* Skill */
+
+.skill {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.skill-info h3 {
+    font-size: 17px;
+}
+
+.skill-info span {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+/* Progress Bar */
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: #2563eb;
+
+    transition: width 1.5s ease-in-out;
+}
+
+
+/* Animated Widths */
+
+.progress.animate.html {
+    width: 95%;
+}
+
+.progress.animate.css {
+    width: 90%;
+}
+
+.progress.animate.javascript {
+    width: 80%;
+}
+
+.progress.animate.react {
+    width: 75%;
+}
+
+.progress.animate.bootstrap {
+    width: 85%;
+}
+
+.progress.animate.git {
+    width: 70%;
+}
+
+
+/* Hover Effect */
+
+.skill {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .skills-section {
+        padding: 70px 15px;
+    }
+
+    .section-title h1 {
+        font-size: 30px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .section-title h1 {
+        font-size: 26px;
+    }
+
+    .section-title p {
+        font-size: 14px;
+    }
+
+    .skill-info h3 {
+        font-size: 15px;
+    }
+}
